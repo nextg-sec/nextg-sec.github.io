@@ -1,0 +1,457 @@
+.right-align {
+  text-align: right;
+}
+
+.center-align {
+  text-align: center;
+}
+
+
+.logosbu {
+  margin-top: 22px;
+  margin-bottom: 22px;
+  width: 55%;
+}
+
+
+.logofb {
+  margin-top: 10px;
+  width: 64%;
+}
+
+
+.date.columns {
+  width: 155px;
+}
+
+
+.header-image {
+  vertical-align: middle;
+}
+
+.iframe-container {
+  overflow: hidden;
+  padding-top: 25.6%;
+  position: relative;
+}
+
+.iframe-container iframe {
+  border: 0;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.cfptitlelinks {
+  margin-left: 20px;
+  font-size: 20px;
+}
+
+/* https://www.jsvine.com/mta-colors/ */
+/* Note that use of MTA logos, maps and symbols requires a license. For licensing information, contact Mark Heavey at mheavey@mtahq.org. */
+/* Hex codes below compiled from http://mta.info/developers/data/colors.csv */
+.mta-bullet {
+  font-family: Helvetica, sans-serif;
+  width: 0.9em;
+  height: 0.9em;
+  font-size: 0.9em;
+  line-height: 1em;
+  padding: 0.25em;
+  text-align: center;
+  font-weight: bold;
+  color: #FFF;
+  -webkit-border-radius: 999px;
+  -moz-border-radius: 999px;
+  border-radius: 999px;
+  behavior: url(css/PIE.htc);
+}
+
+span.mta-bullet {
+  display: inline-block;
+}
+
+.mta-a,
+.mta-c,
+.mta-e,
+.mta-ace {
+  background-color: #2850AD;
+}
+
+.mta-b,
+.mta-d,
+.mta-f,
+.mta-m,
+.mta-bdfm {
+  background-color: #FF6319;
+}
+
+.mta-g {
+  background-color: #6CBE45;
+}
+
+.mta-j,
+.mta-z,
+.mta-jz {
+  background-color: #996633;
+}
+
+.mta-l {
+  background-color: #A7A9AC;
+}
+
+.mta-n,
+.mta-q,
+.mta-r,
+.mta-nqr {
+  background-color: #FCCC0A;
+  color: #333;
+}
+
+.mta-s {
+  background-color: #808183;
+}
+
+.mta-1,
+.mta-2,
+.mta-3,
+.mta-123 {
+  background-color: #EE352E;
+}
+
+.mta-4,
+.mta-5,
+.mta-6,
+.mta-456 {
+  background-color: #00933C;
+}
+
+.mta-7 {
+  background-color: #B933AD;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+
+hr.thin {
+  height: 1px;
+  border: 0;
+  color: #e8e8e8;
+  background-color: #e8e8e8;
+  margin: 2px 0 10px;
+}
+
+.sessionbox {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .2);
+  margin-top: 0em;
+  padding-top: 0em;
+  position: relative;
+}
+
+.sessionbox23 {
+  background-color: #fff;
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, .2);
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, .2);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .2);
+  margin-top: 3em;
+  height: 460px;
+  position: relative;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Base */
+/* ----------------------------------------------------------*/
+
+a {
+  color: #2567d8;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #2567d8;
+  text-decoration: underline;
+}
+
+a:visited {
+  color: #1657BC;
+}
+
+/* Layout Styles */
+/* ----------------------------------------------------------*/
+
+/* header */
+
+.site-header {
+  border-top: 6px solid #ccc;
+  border-bottom: 1px solid #e8e8e8;
+  background-color: white;
+}
+
+/* menu */
+
+.site-menu {
+  border-bottom: 1px solid #e8e8e8;
+  min-height: 42px;
+  background-color: #fdfdfd;
+}
+
+.site-menu-leftentry,
+.site-menu-leftentry:hover,
+.site-menu-leftentry:visited {
+  display: block;
+  font-size: 18px;
+  color: #2567d8;
+  float: left;
+  line-height: 42px;
+  position: relative;
+  z-index: 1;
+}
+
+.site-nav {
+  float: right;
+  line-height: 42px;
+}
+
+.site-nav .menu-icon {
+  display: none;
+}
+
+.site-nav .page-link {
+  margin-left: 20px;
+  font-size: 18px;
+  color: #2567d8;
+}
+
+.site-nav .grey {
+  color: #BBB;
+}
+
+.site-nav .active {
+  color: #000;
+}
+
+/* footer */
+
+.site-footer .container {
+  /* Styles moved here to constrain the background */
+  background-color: white;
+  color: #333;
+
+  /* Existing rules to center and limit width */
+  max-width: 840px;
+  margin: 0 auto;
+
+  /* Adjusted padding for space inside the colored box */
+  padding: 30px 40px;
+  border-radius: 0px; /* Optional: adds nice rounded corners */
+
+  /* Delimiter line between page body and footer */
+  border-top: 2px solid #2567d8;
+  margin-top: 40px;
+}
+
+/* Page styles */
+/* ----------------------------------------------------------*/
+
+.page>* {
+  margin: 13px 0;
+}
+
+.page h1,
+.page h2,
+.page h3,
+.page h4,
+.page h5,
+.page h6 {
+  line-height: 1.2;
+  margin: 30px 0 15px;
+  font-weight: 600;
+  color: #333;
+}
+
+.page h1 {
+  font-size: 2.4em;
+  border-bottom: 3px solid #2567d8;
+  padding-bottom: 10px;
+  margin-top: 40px;
+}
+
+.page h2 {
+  font-size: 1.8em;
+  border-bottom: 2px solid #2567d8;
+  padding-bottom: 8px;
+  margin-top: 35px;
+}
+
+.page h3 {
+  font-size: 1.4em;
+  color: #2567d8;
+  margin-top: 30px;
+}
+
+.page h4 {
+  font-size: 1.2em;
+  color: #555;
+  margin-top: 25px;
+}
+
+.page h5 {
+  font-size: 1.1em;
+  color: #666;
+  margin-top: 20px;
+}
+
+.page h6 {
+  font-size: 1em;
+  color: #777;
+  margin-top: 20px;
+}
+
+/* Schedule styles */
+/* ----------------------------------------------------------*/
+
+/*.schedule h3 {
+  margin: 10px 0 8px;
+}*/
+
+.keynote h3 {
+  margin: 0px 0 12px;
+}
+
+.break h3 {
+  margin: 0px 0 6px;
+}
+
+.session h3 {
+  margin: 0px 0 8px;
+}
+
+
+
+/* Content-specific styles */
+/* ----------------------------------------------------------*/
+
+.maintitle {
+  font-size: 1.5em;
+  margin: 24px 0 10px;
+}
+
+.redtext {
+  color: #E60000;
+}
+
+.greytext {
+  color: #AAA;
+}
+
+/* File Icon  https://gist.github.com/Victa/3091674 */
+/* ----------------------------------------------------------*/
+
+i {
+  display: inline-block;
+  position: relative;
+  margin: 0 .5em 0 .8em;
+}
+
+i::before {
+  content: "";
+  position: absolute;
+  display: block;
+}
+
+.file {
+  top: 2px;
+  width: 11px;
+  height: 14px;
+  background-image: linear-gradient(#e4e4e4, #fff);
+  box-shadow: inset 0 1px 0 #f4f4f4, inset 1px 0 0 #f4f4f4, inset -1px 0 0 #f4f4f4;
+  border-radius: 0 .3em 0 0;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #a9a9a9 #a3a3a3 #949494 #a3a3a3;
+}
+
+.file::before {
+  right: -1px;
+  top: -1px;
+  width: 3px;
+  height: 3px;
+  background-image: linear-gradient(#f5f5f5, #fdfdfd);
+  border-radius: 0 .3em 0 0;
+  background-clip: padding-box;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #b1b1b2 #b1b1b2 #969696 #a7a7a7;
+}
+
+
+
+
+
+
+@media screen and (max-width: 730px) {
+
+  .wrap {
+    padding: 0 12px;
+  }
+
+  .site-nav {
+    position: relative;
+    z-index: 10;
+    top: 4px;
+    right: 8px;
+    background-color: white;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    border: 1px solid #e8e8e8;
+  }
+
+  .site-nav .menu-icon {
+    display: block;
+    font-size: 24px;
+    color: #505050;
+    float: right;
+    width: 42px;
+    text-align: center;
+    line-height: 30px;
+  }
+
+  .site-nav .menu-icon svg {
+    width: 20px;
+    height: 16px;
+  }
+
+  .site-nav .trigger {
+    clear: both;
+    margin-bottom: 5px;
+    display: none;
+  }
+
+  .site-nav:hover .trigger {
+    display: block;
+  }
+
+  .site-nav .page-link {
+    display: block;
+    text-align: right;
+    line-height: 1.25;
+    padding: 5px 10px;
+    margin: 0;
+  }
+}

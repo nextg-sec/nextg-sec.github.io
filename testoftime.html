@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>ACNS 2026: Call for Papers</title>
+  <meta name="description" content="ACNS 2026 - Applied Cryptography and Network Security">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/dropdown.css">
+
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container">
+      <div class="row">
+        <img class="header-image u-max-full-width" src="images/banner5.jpg" alt="ACNS 2026, Stony Brook">
+      </div>
+    </div>
+  </header>
+
+  <header class="site-menu">
+    <div id="menu"></div>
+    <script>
+      fetch("components/menu.html")
+        .then(response => response.text())
+        .then(data => { document.getElementById("menu").innerHTML = data; });
+    </script>
+  </header>
+
+  <div class="container">
+    <div class="page">
+      <h2>Call for Nominations: ACNS Test-of-Time Award 2026</h2>
+
+      <p><a href="http://jianying.space/acns/">ACNS</a> (International Conference on Applied Cryptography and Network Security) is an annual conference launched in 2003, focusing on current developments that advance the areas of applied cryptography, cybersecurity (including network & computer security) and privacy. ACNS started giving the Test-of-Time Award in 2025 to recognize papers that have had a lasting impact on the field. ACNS will continue the tradition by giving the Test-of-Time Award in 2026.</p>
+
+      <h3>Award Committee</h3>
+
+      <ul>
+        <li>Christina Pöpper & Lejla Batina (ACNS 2024 program chairs)</li>
+        <li>Marc Fischlin & Veelasha Moonsamy (ACNS 2025 program chairs)</li>
+        <li>Aniket Kate & Kangkook Jee (ACNS 2026 program chairs)</li>
+        <li>Jianying Zhou (ACNS steering committee) - Chair</li>
+      </ul>
+
+      <h3>Nomination</h3>
+      <p>Any person can nominate a paper published at ACNS for the award. Self-nomination is also allowed. To nominate a paper, please submit the following information to the committee chair, Jianying Zhou at <a href="mailto:jianying_zhou@sutd.edu.sg">jianying_zhou@sutd.edu.sg</a> by the deadline.</p>
+
+      <ul>
+        <li>Paper title, paper authors, and year of publication</li>
+        <li>Reason for nomination</li>
+        <li>Name, affiliation, and email address of the nominator</li>
+      </ul>
+
+      <p>The reason for nomination should be at most 500 words explaining why the paper has stood the test of time, what influence it has had on the field, and the impact the paper has had.</p>
+
+      <ul>
+        <li><b>Deadline:</b> January 28, 2026 AoE</li>
+        <li><b>Eligibility:</b> To be eligible for the award given in 2026, a paper must have been published <em>between 2008 and 2010</em>. Papers authored or co-authored by the award committee members are not eligible to receive the award.</li>
+        <li><b>Ceremony:</b> The Test-of-Time award will be presented at ACNS 2026 (New York, USA, June 22-25, 2026), and the recipient will give a (short) talk about some background on what led to the paper, or what their view on the topic is now and what has happened to the area in the meantime. The recipient's registration fee will be waived.</li>
+      </ul>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div id="sponsors"></div>
+    <script>
+      fetch("components/sponsors.html")
+        .then(response => response.text())
+        .then(data => { document.getElementById("sponsors").innerHTML = data; });
+    </script>
+  </footer>
+</body>
+
+</html>

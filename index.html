@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>ACNS 2026: Home</title>
+  <meta name="description" content="ACNS 2026 - Applied Cryptography and Network Security">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="ACNS 2026 Conference">
+  <meta property="og:description" content="Annual conference on applied cryptography and network security.">
+  <meta property="og:url" content="https://acns2026.github.io/">
+  <meta property="og:type" content="website">
+
+  <script type="application/ld+json">
+    {
+      "@context" : "https://schema.org",
+      "@type" : "WebSite",
+      "name" : "ACNS 2026",
+      "url" : "https://acns2026.github.io/"
+    }
+    </script>
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/dropdown.css">
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container">
+      <div class="row">
+        <img class="header-image u-max-full-width" src="images/banner5.jpg" alt="ACNS 2026, Stony Brook">
+      </div>
+    </div>
+  </header>
+
+  <header class="site-menu">
+    <div id="menu"></div>
+    <script>
+      fetch("components/menu.html")
+        .then(response => response.text())
+        .then(data => { document.getElementById("menu").innerHTML = data; });
+    </script>
+  </header>
+
+  <div class="container">
+    <div class="page">
+      <h2>Applied Cryptography and Network Security (ACNS) 2026</h2>
+
+      <div class="row">
+        <div class="eight columns">
+          <p>The Applied Cryptography and Network Security (ACNS) conference is an annual conference focusing on current
+            developments that advance the areas of applied cryptography, cybersecurity (including network and computer
+            security), and privacy. The goal is to represent both academic research works as well as developments in
+            industrial and technical frontiers. Submissions may focus on the modelling, design, analysis (including
+            security proofs and attacks), development (e.g., implementations), deployment (e.g., system integration), and
+            maintenance (e.g., performance measurements and usability studies) of algorithms, protocols, standards,
+            implementations, technologies, devices, systems standing in relation with applied cryptography, cybersecurity
+            and privacy, while advancing or bringing new insights to the state of the art.</p>
+
+        </div>
+        <div class="four columns">
+          <img src="images/acns-logo_L.jpg" alt="ACNS Logo" class="u-max-full-width">
+        </div>
+
+      </div>
+      <p>The 2026 edition of ACNS will be held at the <b>Wang Center</b> in Stony Brook. The proceedings of
+        ACNS 2026 will be published as a part of Springer's LNCS series.</p>
+      <p></p>
+
+      <h2>Important Dates</h2>
+      While taking place at Stony Brook, NY during June 22-25, 2026, the ACNS 2026 conference will have two cycles for
+      paper submissions. The first cycle will be due on September 26, 2025 AoE and the second cycle will be due on
+      January 23, 2026 AoE.
+      <ul>
+        <li>Cycle 1 Submission deadline: September 26, 2025 AoE</li>
+        <li>Cycle 1 Notification: November 20, 2025 AoE</li>
+        <li>Cycle 2 Submission deadline: January 23, 2026 AoE</li>
+        <li>Cycle 2 Notification: Mar 19, 2025 AoE</li>
+        <li>Conference: June 22–25, 2026</li>
+      </ul>
+      <h2>News</h2>
+      <ul>
+        <li>Aug 11, 2025 - <a href="https://acns26-cycle1.hotcrp.com/">Submission site (cycle1)</a> opened.</li>
+        <li>Aug 1, 2025 - CFP Updated.</li>
+        <li>Website launched.</li>
+      </ul>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div id="sponsors"></div>
+    <script>
+      fetch("components/sponsors.html")
+        .then(response => response.text())
+        .then(data => { document.getElementById("sponsors").innerHTML = data;});
+    </script>
+  </footer>
+</body>
+
+</html>

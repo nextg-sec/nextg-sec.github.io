@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>ACNS 2026: Call for Papers</title>
+  <meta name="description" content="ACNS 2026 - Applied Cryptography and Network Security">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/dropdown.css">
+
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container">
+      <div class="row">
+        <img class="header-image u-max-full-width" src="images/banner5.jpg" alt="ACNS 2026, Stony Brook">
+      </div>
+    </div>
+  </header>
+
+  <header class="site-menu">
+    <div id="menu"></div>
+    <script>
+      fetch("components/menu.html")
+        .then(response => response.text())
+        .then(data => { document.getElementById("menu").innerHTML = data; });
+    </script>
+  </header>
+
+  <div class="container">
+    <div class="page">
+      <h2>Call for Posters</h2>
+
+      <p>ACNS will include a poster session to provide a forum for presenting and discussing work in progress, current and upcoming research challenges, new research directions, and approaches in the field of applied cryptography and cybersecurity. In particular, we value submissions on interdisciplinary work among researchers and joint work between academia and industry. High-quality poster presentations are of great importance to ANCS. There will be an ACNS best poster award.</p>
+
+      <h3>Submission Guidelines</h3>
+
+      <p>Authors are invited to submit a short proposal that describes the main contributions of the poster. Proposals should contain a brief abstract, demonstrate the motivation for the work, and summarize contributions being presented. Preliminary results may also be included. The proposal should clearly state the difference between the work that will be presented and any previous work or the work under submission on the same topic. The submitted proposals will be evaluated primarily on their potential to stimulate interesting discussions, facilitate the exchange of ideas, and promote collaborations. Authors of accepted poster proposals will be provided instructions for preparing the posters. Tripods will be provided to display all accepted posters. Proposals must follow the LNCS proceedings-style with 5 pages maximum including title, abstract, content, and any references.</p>
+
+      <p>Proposals are not blinded, and must contain the authors' names, affiliations, and contact information. All poster titles must begin with the keyword "POSTER:". Submissions that are not formatted as described above risk rejection without review. All submissions must designate a single corresponding author. At least one presenter per accepted poster must register for the conference. The accepted posters will be published in the post-proceedings published in the LNCS series by Springer.</p>
+
+      <h3>Important Dates</h3>
+
+      <ul>
+        <li><strong>Submission:</strong> Submit PDF by email to the Poster Chair</li>
+        <li><strong>Submission deadline:</strong> <b>TBA</b></li>
+        <li><strong>Author notification:</strong> <b>TBA</b></li>
+        <li><strong>Camera-ready deadline:</strong> <b>TBA</b></li>
+      </ul>
+
+      <h3>Poster Chair</h3>
+
+      <p>Anrin Chakraborti, <em>University of Illinois at Chicago</em></p>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div id="sponsors"></div>
+    <script>
+      fetch("components/sponsors.html")
+        .then(response => response.text())
+        .then(data => { document.getElementById("sponsors").innerHTML = data; });
+    </script>
+  </footer>
+</body>
+
+</html>
