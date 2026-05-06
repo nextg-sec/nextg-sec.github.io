@@ -4,22 +4,22 @@
     {
       "name": "Elisa Bertino",
       "affiliation": "Purdue University",
-      "photo": "bertino.jpg"
+      "photo": "images/bertino.jpg"
     },
     {
       "name": "Hongxin Hu",
       "affiliation": "University at Buffalo",
-      "photo": "hongxinhu.jpg"
+      "photo": "images/hongxinhu.jpg"
     },
     {
       "name": "Omar Chowdhury",
       "affiliation": "Stony Brook University",
-      "photo": "omar-chowdhury.jpg"
+      "photo": "images/omar-chowdhury.jpg"
     },
     {
       "name": "Hanif Rahbari",
       "affiliation": "Rochester Institute of Technology",
-      "photo": "hanif-rahbati-right.jpeg"
+      "photo": "images/hanif-rahbati-right.jpeg"
     }
   ]
 }
