@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>NextG-Sec 2026: Panel</title>
+  <meta name="description" content="NextG-Sec 2026 Workshop - Panel Discussion">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/dropdown.css">
+  <style>
+    .schedule-tabs {
+      display: flex;
+      gap: 0;
+      margin-bottom: 30px;
+      border-bottom: 2px solid #2567d8;
+    }
+    .schedule-tab {
+      padding: 8px 24px;
+      font-size: 1em;
+      font-weight: 600;
+      color: #2567d8;
+      text-decoration: none;
+      border: 1px solid #ddd;
+      border-bottom: none;
+      background: #f9f9f9;
+      border-radius: 4px 4px 0 0;
+      margin-right: 4px;
+    }
+    .schedule-tab.active {
+      background: #2567d8;
+      color: #fff;
+      border-color: #2567d8;
+    }
+    .schedule-tab:hover:not(.active) {
+      background: #e8f0fb;
+      text-decoration: none;
+    }
+    .panel-title {
+      font-size: 1.25em;
+      font-weight: 600;
+      color: #2567d8;
+      margin-bottom: 28px;
+      padding: 16px 20px;
+      background: #f0f5ff;
+      border-left: 4px solid #2567d8;
+      border-radius: 0 4px 4px 0;
+    }
+    .panelists-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+      margin-top: 24px;
+    }
+    .panelist-card {
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      overflow: hidden;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.07);
+      background: #fff;
+      display: flex;
+      flex-direction: column;
+    }
+    .panelist-card .photo-box {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      overflow: hidden;
+      background: #f0f0f0;
+    }
+    .panelist-card .photo-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      display: block;
+    }
+    .panelist-info {
+      padding: 10px 12px 14px;
+    }
+    .panelist-name {
+      font-weight: 700;
+      font-size: 0.9em;
+      color: #222;
+      margin: 0 0 3px;
+    }
+    .panelist-affiliation {
+      font-size: 0.8em;
+      color: #555;
+      margin: 0;
+    }
+    @media (max-width: 600px) {
+      .panelists-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container">
+      <div class="row">
+        <img class="header-image u-max-full-width" src="images/nextg-sec-banner.jpg" alt="NextG-Sec 2026">
+      </div>
+    </div>
+  </header>
+
+  <header class="site-menu">
+    <div id="menu"></div>
+    <script>
+      fetch("components/menu.html")
+        .then(response => response.text())
+        .then(data => { document.getElementById("menu").innerHTML = data; });
+    </script>
+  </header>
+
+  <div class="container">
+    <div class="page">
+      <h2>Schedule</h2>
+
+      <div class="schedule-tabs">
+        <a class="schedule-tab" href="schedule-keynotes.html">Keynotes</a>
+        <a class="schedule-tab active" href="schedule-panel.html">Panel</a>
+      </div>
+
+      <p id="panel-title" class="panel-title"></p>
+
+      <h3>Panelists</h3>
+      <div id="panelists-grid" class="panelists-grid"></div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div id="sponsors"></div>
+    <script>
+      fetch("components/sponsors.html")
+        .then(response => response.text())
+        .then(data => { document.getElementById("sponsors").innerHTML = data; });
+    </script>
+  </footer>
+
+  <script>
+    function escapeHtml(str) {
+      return str
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;");
+    }
+
+    fetch("schedule/panel/data.json")
+      .then(r => r.json())
+      .then(data => {
+        document.getElementById("panel-title").textContent = data.title;
+
+        const grid = document.getElementById("panelists-grid");
+        grid.innerHTML = data.panelists.map(p => `
+          <div class="panelist-card">
+            <div class="photo-box">
+              <img src="schedule/panel/${escapeHtml(p.photo)}" alt="${escapeHtml(p.name)}">
+            </div>
+            <div class="panelist-info">
+              <p class="panelist-name">${escapeHtml(p.name)}</p>
+              <p class="panelist-affiliation">${escapeHtml(p.affiliation)}</p>
+            </div>
+          </div>
+        `).join("");
+      });
+  </script>
+</body>
+
+</html>
