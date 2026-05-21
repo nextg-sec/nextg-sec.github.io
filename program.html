@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>NextG-Sec 2026: Program</title>
+  <meta name="description" content="NextG-Sec 2026 Workshop - Full Program Schedule">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/dropdown.css">
+  <style>
+    .schedule-tabs {
+      display: flex;
+      gap: 0;
+      margin-bottom: 30px;
+      border-bottom: 2px solid #2567d8;
+    }
+    .schedule-tab {
+      padding: 8px 24px;
+      font-size: 1em;
+      font-weight: 600;
+      color: #2567d8;
+      text-decoration: none;
+      border: 1px solid #ddd;
+      border-bottom: none;
+      background: #f9f9f9;
+      border-radius: 4px 4px 0 0;
+      margin-right: 4px;
+    }
+    .schedule-tab.active {
+      background: #2567d8;
+      color: #fff;
+      border-color: #2567d8;
+    }
+    .schedule-tab:hover:not(.active) {
+      background: #e8f0fb;
+      text-decoration: none;
+    }
+
+    .schedule-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 32px;
+    }
+    .schedule-table td {
+      padding: 12px 16px;
+      vertical-align: top;
+      border: 1px solid #e0e0e0;
+      font-size: 0.95em;
+      line-height: 1.5;
+    }
+    .schedule-table .time-col {
+      width: 130px;
+      white-space: nowrap;
+      font-weight: 600;
+      color: #444;
+      background: #fafafa;
+    }
+    .row-break {
+      background: #f3f3f3;
+    }
+    .row-break .event-col {
+      color: #666;
+      font-style: italic;
+    }
+    .row-joint {
+      background: #f0fff4;
+    }
+    .row-joint .event-col {
+      color: #2d7a4f;
+    }
+    .row-keynote {
+      background: #f0f5ff;
+    }
+    .row-panel {
+      background: #f5f0ff;
+    }
+    .row-papers {
+      background: #fff;
+    }
+    .row-social {
+      background: #fffbe6;
+    }
+
+    .session-label {
+      font-weight: 700;
+      font-size: 1em;
+      color: #2567d8;
+      margin-bottom: 8px;
+      display: block;
+    }
+    .session-label.green { color: #2d7a4f; }
+    .session-label.purple { color: #6a3da8; }
+    .session-label.orange { color: #b36200; }
+
+    .session-item {
+      margin: 0 0 8px 0;
+      padding-left: 0;
+    }
+    .session-item-time {
+      font-weight: 600;
+      color: #555;
+      margin-right: 6px;
+    }
+    .session-item-role {
+      font-weight: 600;
+      color: #333;
+    }
+
+    /* reset skeleton.css li overrides */
+    .paper-list li {
+      text-indent: 0;
+      margin-left: 0;
+      margin-bottom: 0;
+    }
+    /* restore padding stripped by skeleton td:first-child rule */
+    .schedule-table td:first-child {
+      padding-left: 12px;
+    }
+    .schedule-table td:last-child {
+      padding-right: 16px;
+    }
+    .paper-list {
+      margin: 8px 0 0 0;
+      padding: 0;
+      list-style: none;
+    }
+    .paper-item {
+      margin-bottom: 24px;
+      padding: 12px 16px;
+      background: #f8faff;
+      border: 1px solid #c7d9f7;
+      border-radius: 4px;
+      line-height: 1.6;
+      overflow: hidden;
+    }
+    .paper-item:last-child {
+      margin-bottom: 0;
+    }
+    .paper-time-type {
+      display: block;
+      font-size: 0.85em;
+      color: #666;
+      margin: 0 0 6px 0;
+      line-height: 1.4;
+    }
+    .paper-type-badge {
+      display: inline-block;
+      font-size: 0.75em;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 3px;
+      margin-left: 8px;
+      line-height: 1.4;
+      vertical-align: baseline;
+    }
+    .badge-invited {
+      background: #fff3cd;
+      color: #856404;
+    }
+    .badge-full {
+      background: #d1e7dd;
+      color: #0f5132;
+    }
+    .badge-short {
+      background: #d0e4ff;
+      color: #084298;
+    }
+    .paper-title {
+      display: block;
+      font-weight: 700;
+      font-size: 0.95em;
+      color: #1a1a2e;
+      margin: 0 0 6px 0;
+      line-height: 1.5;
+    }
+    .paper-authors {
+      display: block;
+      font-size: 0.88em;
+      color: #555;
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    .panelist-inline {
+      display: inline;
+    }
+    .panel-members {
+      margin-top: 6px;
+      font-size: 0.92em;
+      color: #444;
+    }
+
+    @media (max-width: 600px) {
+      .schedule-table .time-col {
+        width: 90px;
+        font-size: 0.85em;
+      }
+      .schedule-table td {
+        padding: 10px 10px;
+        font-size: 0.9em;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container">
+      <div class="row">
+        <img class="header-image u-max-full-width" src="images/nextg-sec-banner.jpg" alt="NextG-Sec 2026">
+      </div>
+    </div>
+  </header>
+
+  <header class="site-menu">
+    <div id="menu"></div>
+    <script>
+      fetch("components/menu.html")
+        .then(response => response.text())
+        .then(data => { document.getElementById("menu").innerHTML = data; });
+    </script>
+  </header>
+
+  <div class="container">
+    <div class="page">
+      <h2>Schedule</h2>
+
+      <div class="schedule-tabs">
+        <a class="schedule-tab active" href="program.html">Program</a>
+        <a class="schedule-tab" href="schedule-keynotes.html">Keynotes</a>
+        <a class="schedule-tab" href="schedule-panel.html">Panel</a>
+      </div>
+
+      <p style="font-size:0.95em; color:#555; margin-bottom:20px;">
+        <strong>June 23, 2026</strong> &mdash; Wang Center, Stony Brook University, NY
+      </p>
+
+      <table class="schedule-table">
+        <tbody>
+
+          <!-- ACNS Keynote 2 (joint) -->
+          <tr class="row-joint">
+            <td class="time-col">09:00 &ndash; 10:20</td>
+            <td class="event-col">
+              <span class="session-label green">ACNS Keynote 2</span>
+              Joint session with the main ACNS conference
+            </td>
+          </tr>
+
+          <!-- Coffee break -->
+          <tr class="row-break">
+            <td class="time-col">10:20 &ndash; 10:50</td>
+            <td class="event-col">Coffee Break</td>
+          </tr>
+
+          <!-- Keynote block -->
+          <tr class="row-keynote">
+            <td class="time-col">11:10 &ndash; 12:40</td>
+            <td class="event-col">
+              <span class="session-label">Workshop Opening &amp; Keynotes</span>
+              <div class="session-item">
+                <span class="session-item-time">11:10 &ndash; 11:20</span>
+                <span class="session-item-role">Opening Remarks</span>
+              </div>
+              <div class="session-item">
+                <span class="session-item-time">11:20 &ndash; 12:00</span>
+                <span class="session-item-role">Keynote:</span>
+                <a href="schedule-keynotes.html">Dr. Endadul Hoque</a>
+              </div>
+              <div class="session-item">
+                <span class="session-item-time">12:00 &ndash; 12:40</span>
+                <span class="session-item-role">Keynote:</span>
+                <a href="schedule-keynotes.html">Dr. Brad Reaves</a>
+              </div>
+            </td>
+          </tr>
+
+          <!-- Lunch -->
+          <tr class="row-break">
+            <td class="time-col">12:40 &ndash; 14:00</td>
+            <td class="event-col">Lunch Break</td>
+          </tr>
+
+          <!-- Panel + Keynote -->
+          <tr class="row-panel">
+            <td class="time-col">14:00 &ndash; 15:30</td>
+            <td class="event-col">
+              <span class="session-label purple">Panel &amp; Keynote</span>
+              <div class="session-item">
+                <span class="session-item-time">14:00 &ndash; 14:45</span>
+                <span class="session-item-role">Panel Discussion</span>
+                <div class="panel-members">
+                  <a href="schedule-panel.html">Dr. Elisa Bertino</a>,
+                  <a href="schedule-panel.html">Dr. Hongxin Hu</a>,
+                  <a href="schedule-panel.html">Dr. Omar Chowdhury</a>,
+                  <a href="schedule-panel.html">Dr. Hanif Rahbari</a>
+                </div>
+              </div>
+              <div class="session-item" style="margin-top:10px;">
+                <span class="session-item-time">14:50 &ndash; 15:30</span>
+                <span class="session-item-role">Keynote:</span>
+                <a href="schedule-keynotes.html">Dr. Farbod Tavakkoli</a>
+              </div>
+            </td>
+          </tr>
+
+          <!-- Coffee break -->
+          <tr class="row-break">
+            <td class="time-col">15:30 &ndash; 16:00</td>
+            <td class="event-col">Coffee Break</td>
+          </tr>
+
+          <!-- Paper Presentations -->
+          <tr class="row-papers">
+            <td class="time-col">16:00 &ndash; 17:30</td>
+            <td class="event-col">
+              <span class="session-label">Paper Presentations</span>
+              <ul class="paper-list">
+
+                <li class="paper-item">
+                  <div class="paper-time-type">
+                    16:00 &ndash; 16:20
+                    <span class="paper-type-badge badge-invited">Invited Paper</span>
+                  </div>
+                  <div class="paper-title">NextG Security for Mission Critical Communication</div>
+                  <div class="paper-authors">
+                    Arupjyoti Bhuyan (Idaho National Laboratory),
+                    William Edwards (US Navy, Retired),
+                    Junaid Islam (OODA LLC),
+                    Jason Hilker (US Marine Corps, Retired)
+                  </div>
+                </li>
+
+                <li class="paper-item">
+                  <div class="paper-time-type">
+                    16:20 &ndash; 16:40
+                    <span class="paper-type-badge badge-full">Full Paper</span>
+                  </div>
+                  <div class="paper-title">Towards Post-Quantum Secure eSIM Provisioning Protocols</div>
+                  <div class="paper-authors">
+                    Harrison Banda (University of Regensburg),
+                    Hannes Bartz (German Aerospace Center, DLR),
+                    Juliane Kr&auml;mer (University of Regensburg),
+                    Michael Meyer (University of Regensburg),
+                    Vincent Quentin Ulitzsch (MIT)
+                  </div>
+                </li>
+
+                <li class="paper-item">
+                  <div class="paper-time-type">
+                    16:40 &ndash; 17:00
+                    <span class="paper-type-badge badge-full">Full Paper</span>
+                  </div>
+                  <div class="paper-title">AI-Assisted 5G Security Testing: Leveraging LLMs for the Assessment of User Equipment</div>
+                  <div class="paper-authors">
+                    Syed Khandker (New York University Abu Dhabi),
+                    Zacharia Kornas (New York University),
+                    Christina P&ouml;pper (New York University Abu Dhabi)
+                  </div>
+                </li>
+
+                <li class="paper-item">
+                  <div class="paper-time-type">
+                    17:00 &ndash; 17:20
+                    <span class="paper-type-badge badge-short">Short Paper</span>
+                  </div>
+                  <div class="paper-title">The Application of Zero-Trust Architecture in O-RAN Networks &mdash; Current Challenges and the Road Ahead</div>
+                  <div class="paper-authors">
+                    Charalampos Katsis (Purdue University),
+                    Imtiaz Karim (The University of Texas at Dallas),
+                    Elisa Bertino (Purdue University)
+                  </div>
+                </li>
+
+              </ul>
+            </td>
+          </tr>
+
+          <!-- Social Dinner -->
+          <tr class="row-social">
+            <td class="time-col">Evening</td>
+            <td class="event-col">
+              <span class="session-label orange">ACNS Social Dinner</span>
+              Joint social dinner with ACNS 2026 attendees
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div id="sponsors"></div>
+    <script>
+      fetch("components/sponsors.html")
+        .then(response => response.text())
+        .then(data => { document.getElementById("sponsors").innerHTML = data; });
+    </script>
+  </footer>
+</body>
+
+</html>
